@@ -1,0 +1,5 @@
+faster-whisper
+yt-dlp
+yt-dlp-ejs
+nvidia-cudnn-cu12==9.*
+nvidia-cublas-cu12

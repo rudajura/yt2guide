@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+D="$(dirname "$(readlink -f "$0")")"
+NV="$D/.venv/lib/python3.12/site-packages/nvidia"
+export LD_LIBRARY_PATH="$NV/cudnn/lib:$NV/cublas/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export PATH="$D/.venv/bin:$PATH"
+exec "$D/.venv/bin/python" "$D/yt2guide.py" "$@"
