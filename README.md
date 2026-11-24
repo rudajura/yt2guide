@@ -43,6 +43,15 @@ git clone git@github.com:rudajura/yt2guide.git ~/yt2guide
 
 The Whisper model (~1.6 GB) downloads on the first transcription.
 
+## Verification
+
+Unit tests cover the pure functions (timestamps, frame selection, transcript window, media
+lookup) and run without a GPU, network, Ollama or any models.
+
+```bash
+uv run --no-project --python 3.12 --with-requirements requirements-dev.txt pytest -q
+```
+
 ## How it fits together
 
 - `.venv` holds `faster-whisper`, `yt-dlp`, `yt-dlp-ejs` and the CUDA 12 cuDNN/cuBLAS wheels
