@@ -2,3 +2,4 @@
 models/
 __pycache__/
 yt2guide-*/
+.pytest_cache/
